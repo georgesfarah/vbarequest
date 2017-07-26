@@ -9,7 +9,7 @@ Make sure that the first row should be the names of the params
 
 ![check](https://github.com/georgesfarah4/vbarequest/blob/master/check.PNG)
 
-after you run it, you can check the generate string if it is correct
+after you run it, you can check the generated string in the immediate window
 
 ![Step2](https://github.com/georgesfarah4/vbarequest/blob/master/Step2.PNG)
 
