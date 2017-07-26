@@ -1,0 +1,47 @@
+Sub request()
+ Dim rng As Range
+    Dim SourceRange As Range
+     Dim vData() As Variant
+   
+    Set rng = Application.InputBox("Select a range", "Obtain Range Object", Type:=8)
+rng.Select
+
+    vData = Selection.Value
+    'Debug.Print "Rows: " & UBound(vData, 1) & " Columns: " & UBound(vData, 2)'
+    
+Dim rowString As String
+Dim i As Long
+Dim jSubA As Long
+
+Dim s As String
+Dim n As Integer
+Dim param As String
+
+rowString = ""
+      
+For i = 2 To UBound(vData, 1)
+    rowString = vData(1, 1) & "=" & vData(i, 1)
+                For jSubA = 2 To UBound(vData, 2)
+                             
+                rowString = rowString & "&" & vData(1, jSubA) & "=" & vData(i, jSubA)
+                
+                Next jSubA
+    
+    Set objHTTP = CreateObject("WinHttp.WinHttpRequest.5.1")
+URL = "http://www.test.com/register.php"
+objHTTP.Open "POST", URL, False
+objHTTP.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
+objHTTP.setRequestHeader "Content-type", "application/x-www-form-urlencoded"
+objHTTP.send (rowString)
+    
+    
+    Debug.Print rowString
+
+Next i
+      
+    
+    
+End Sub
+
+
+
