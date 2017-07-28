@@ -1,6 +1,6 @@
 Sub request()
  Dim rng As Range
-    Dim SourceRange As Range
+   
      Dim vData() As Variant
    
     Set rng = Application.InputBox("Select a range", "Obtain Range Object", Type:=8)
