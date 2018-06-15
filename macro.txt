@@ -13,9 +13,6 @@ Dim rowString As String
 Dim i As Long
 Dim jSubA As Long
 
-Dim s As String
-Dim n As Integer
-Dim param As String
 Dim strResponse As String
 rowString = ""
       
